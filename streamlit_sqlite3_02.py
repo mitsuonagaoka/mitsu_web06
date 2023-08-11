@@ -69,23 +69,33 @@ def create_pdf(dataframe):
 
 pdf_file = create_pdf(df)
 
-# Display PDF preview
 st.title('PDF Preview')
 with open(pdf_file, "rb") as f:
     base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+
+# ダウンロードリンクを表示
 st.markdown(
-    f'<embed src="data:application/pdf;base64,{base64_pdf}" width="800" height="600" type="application/pdf">',
+    f'<a href="data:application/pdf;base64,{base64_pdf}" download="output.pdf">Download PDF</a>',
     unsafe_allow_html=True)
+
+
+# Display PDF preview
+# st.title('PDF Preview')
+# with open(pdf_file, "rb") as f:
+#     base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+# st.markdown(
+#     f'<embed src="data:application/pdf;base64,{base64_pdf}" width="800" height="600" type="application/pdf">',
+#     unsafe_allow_html=True)
 
 # Display PDF download link
 # st.markdown(f"Download [PDF File]({pdf_file})")
 
 # ダウンロードボタンを作成
-if st.button("Download PDF File"):
-    # PDFファイルを生成
-    pdf_data = create_pdf(df)
-
-    # ダウンロードボタンを表示
-    st.download_button("Download PDF", pdf_data, file_name="output.pdf", key="download-pdf")
+# if st.button("Download PDF File"):
+#     # PDFファイルを生成
+#     pdf_data = create_pdf(df)
+#
+#     # ダウンロードボタンを表示
+#     st.download_button("Download PDF", pdf_data, file_name="output.pdf", key="download-pdf")
 
 # streamlit run streamlit_sqlite3_02.py
