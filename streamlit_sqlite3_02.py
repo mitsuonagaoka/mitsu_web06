@@ -10,7 +10,7 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.fonts import addMapping
 
-# Set character encoding
+# Set character encoding ja_JP.UTF-8
 import locale
 
 # locale.setlocale(locale.LC_ALL, 'ja_JP.UTF-8')
