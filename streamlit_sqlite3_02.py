@@ -30,8 +30,15 @@ st.dataframe(df)
 font_path = "C:/Windows/Fonts/msgothic.ttc"
 
 # Register custom font
-pdfmetrics.registerFont(TTFont("MS Gothic", font_path))
-addMapping("MS Gothic", 0, 0, "MS Gothic")
+# pdfmetrics.registerFont(TTFont("MS Gothic", font_path))
+# addMapping("MS Gothic", 0, 0, "MS Gothic")
+
+try:
+    pdfmetrics.registerFont(TTFont("MS Gothic", font_path))
+    addMapping("MS Gothic", 0, 0, "MS Gothic")
+except Exception as e:
+    st.error(f"Error registering font: {e}")
+
 
 
 # Create PDF with borders
