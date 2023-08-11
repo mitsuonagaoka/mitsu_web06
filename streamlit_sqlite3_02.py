@@ -74,7 +74,7 @@ with open(pdf_file, "rb") as f:
     base64_pdf = base64.b64encode(f.read()).decode('utf-8')
 
 # ダウンロードリンクを表示
-st.button(
+st.markdown(
     f'<a href="data:application/pdf;base64,{base64_pdf}" download="output.pdf">Download PDF</a>',
     unsafe_allow_html=True)
 
