@@ -1,6 +1,6 @@
 streamlit
-PyMuPDF
-Pillow
+pandas
+reportlab
 
 
 
