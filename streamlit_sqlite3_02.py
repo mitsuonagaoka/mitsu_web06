@@ -73,10 +73,10 @@ st.title('PDF Preview')
 with open(pdf_file, "rb") as f:
     base64_pdf = base64.b64encode(f.read()).decode('utf-8')
 
-# ダウンロードリンクを表示
-st.markdown(
-    f'<a href="data:application/pdf;base64,{base64_pdf}" download="output.pdf">Download PDF</a>',
-    unsafe_allow_html=True)
+# # ダウンロードリンクを表示
+# st.markdown(
+#     f'<a href="data:application/pdf;base64,{base64_pdf}" download="output.pdf">Download PDF</a>',
+#     unsafe_allow_html=True)
 
 
 # Display PDF preview
@@ -91,11 +91,11 @@ st.markdown(
 # st.markdown(f"Download [PDF File]({pdf_file})")
 
 # ダウンロードボタンを作成
-# if st.button("Download PDF File"):
-#     # PDFファイルを生成
-#     pdf_data = create_pdf(df)
-#
-#     # ダウンロードボタンを表示
-#     st.download_button("Download PDF", pdf_data, file_name="output.pdf", key="download-pdf")
+if st.button("Download PDF File"):
+    # PDFファイルを生成
+    pdf_data = create_pdf(df)
+
+    # ダウンロードボタンを表示
+    st.download_button("Download PDF", pdf_data, file_name="output.pdf", key="download-pdf")
 
 # streamlit run streamlit_sqlite3_02.py
