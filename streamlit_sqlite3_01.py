@@ -31,8 +31,8 @@ st.title('Data Preview')
 # Display data in dataframe
 st.dataframe(df)
 
-# Set default font to MS Gothic
-font_path = "C:/Windows/Fonts/msgothic.ttc"
+# フォントファイルがアプリのディレクトリ内の fonts ディレクトリにある場合のパス
+font_path = "fonts/msgothic.ttc"
 
 # Register custom font
 pdfmetrics.registerFont(TTFont("MS Gothic", font_path))
@@ -74,4 +74,4 @@ st.markdown(
 # Display PDF download link
 st.markdown(f"Download [PDF File]({pdf_file})")
 
-# streamlit run streamlit_sqlite3_02.py
+# streamlit run streamlit_sqlite3_01.py
