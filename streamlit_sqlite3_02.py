@@ -78,6 +78,8 @@ st.markdown(
     unsafe_allow_html=True)
 
 # Display PDF download link
-st.markdown(f"Download [PDF File]({pdf_file})")
+# st.markdown(f"Download [PDF File]({pdf_file})")
+
+st.download_button(f"Download [PDF File]({pdf_file})")
 
 # streamlit run streamlit_sqlite3_02.py
