@@ -80,6 +80,12 @@ st.markdown(
 # Display PDF download link
 # st.markdown(f"Download [PDF File]({pdf_file})")
 
-st.download_button(f"Download [PDF File]({pdf_file})")
+# ダウンロードボタンを作成
+if st.button("Download PDF File"):
+    # PDFファイルを生成
+    pdf_data = create_pdf(df)
+
+    # ダウンロードボタンを表示
+    st.download_button("Download PDF", pdf_data, file_name="output.pdf", key="download-pdf")
 
 # streamlit run streamlit_sqlite3_02.py
