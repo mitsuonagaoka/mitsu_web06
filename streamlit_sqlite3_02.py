@@ -13,7 +13,7 @@ from reportlab.lib.fonts import addMapping
 # Set character encoding
 import locale
 
-locale.setlocale(locale.LC_ALL, 'ja_JP.UTF-8')
+# locale.setlocale(locale.LC_ALL, 'ja_JP.UTF-8')
 
 # Connect to the SQLite database
 conn = sqlite3.connect("./data/product30.db")
