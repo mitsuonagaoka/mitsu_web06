@@ -1,3 +1,5 @@
+# streamlit run streamlit_sqlite3_02.py
+
 import streamlit as st
 import sqlite3
 import pandas as pd
@@ -9,11 +11,14 @@ import base64
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.fonts import addMapping
-
-# Set character encoding ja_JP.UTF-8
 import locale
 
-# locale.setlocale(locale.LC_ALL, 'ja_JP.UTF-8')
+# from reportlab.pdfbase import pdfmetrics
+# from reportlab.pdfbase.ttfonts import TTFont
+
+# pdfmetrics.registerFont(TTFont('MyFont', 'path/to/myfont.ttf'))
+
+# font_path = "C:\Users\marom\PycharmProjects\pythonProject6\mitsu_web06\fonts"
 
 # Connect to the SQLite database
 conn = sqlite3.connect("./data/product30.db")
@@ -31,12 +36,13 @@ st.title('Data Preview')
 # Display data in dataframe
 st.dataframe(df)
 
-# フォントファイルがアプリのディレクトリ内の fonts ディレクトリにある場合のパス
-font_path = "fonts/msgothic.ttc"
+# フォントファイルがアプリのディレクトリ内の fonts ディレクトリにある場合のパス ARLRDBD.TTF
+# font_path = "fonts/msgothic.ttc"
+font_path = "fonts/ARLRDBD.TTF"
 
 # Register custom font
-pdfmetrics.registerFont(TTFont("MS Gothic", font_path))
-addMapping("MS Gothic", 0, 0, "MS Gothic")
+pdfmetrics.registerFont(TTFont("ARLRDBD", font_path))
+addMapping("ARLRDBD", 0, 0, "ARLRDBD")
 
 
 # Create PDF with borders
@@ -49,7 +55,7 @@ def create_pdf(dataframe):
 
     # Add borders to the table
     table_style = TableStyle([('GRID', (0, 0), (-1, -1), 1, colors.black),
-                              ('FONTNAME', (0, 0), (-1, 0), "MS Gothic"),  # Use the specified font name
+                              ('FONTNAME', (0, 0), (-1, 0), "ARLRDBD"),  # Use the specified font name
                               ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
                               ('BACKGROUND', (0, 0), (-1, 0), colors.gray)])
 
@@ -73,5 +79,3 @@ st.markdown(
 
 # Display PDF download link
 st.markdown(f"Download [PDF File]({pdf_file})")
-
-# streamlit run streamlit_sqlite3_02.py
