@@ -30,8 +30,7 @@ st.title('Data Preview')
 # Display data in dataframe
 st.dataframe(df)
 
-# フォントファイルがアプリのディレクトリ内の fonts ディレクトリにある場合のパス msgothic.ttc
-# font_path = "fonts/msgothic.ttc"
+# フォントファイルがアプリのディレクトリ内の fonts ディレクトリにある場合のパス
 # font_path = "fonts/msgothic.ttc"
 
 font_path = "C:\Windows\Fonts\msgothic.ttc"
