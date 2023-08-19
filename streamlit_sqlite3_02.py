@@ -13,12 +13,6 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.fonts import addMapping
 import locale
 
-# from reportlab.pdfbase import pdfmetrics
-# from reportlab.pdfbase.ttfonts import TTFont
-
-# pdfmetrics.registerFont(TTFont('MyFont', 'path/to/myfont.ttf'))
-
-# font_path = "C:\Users\marom\PycharmProjects\pythonProject6\mitsu_web06\fonts"
 
 # Connect to the SQLite database
 conn = sqlite3.connect("./data/product30.db")
@@ -36,13 +30,13 @@ st.title('Data Preview')
 # Display data in dataframe
 st.dataframe(df)
 
-# フォントファイルがアプリのディレクトリ内の fonts ディレクトリにある場合のパス ARIALNB.TTF
+# フォントファイルがアプリのディレクトリ内の fonts ディレクトリにある場合のパス msgothic.ttc
 # font_path = "fonts/msgothic.ttc"
-font_path = "fonts/Arial/ARIALNB.TTF"
+font_path = "fonts/Arial/msgothic.ttc"
 
 # Register custom font
-pdfmetrics.registerFont(TTFont("ARIALNB", font_path))
-addMapping("ARIALNB", 0, 0, "ARIALNB")
+pdfmetrics.registerFont(TTFont("msgothic", font_path))
+addMapping("msgothic", 0, 0, "msgothic")
 
 
 # Create PDF with borders
@@ -55,7 +49,7 @@ def create_pdf(dataframe):
 
     # Add borders to the table
     table_style = TableStyle([('GRID', (0, 0), (-1, -1), 1, colors.black),
-                              ('FONTNAME', (0, 0), (-1, 0), "ARIALNB"),  # Use the specified font name
+                              ('FONTNAME', (0, 0), (-1, 0), "msgothic"),  # Use the specified font name
                               ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
                               ('BACKGROUND', (0, 0), (-1, 0), colors.gray)])
 
