@@ -34,7 +34,7 @@ st.dataframe(df)
 # font_path = "fonts/msgothic.ttc"
 # font_path = "fonts/msgothic.ttc"
 
- font_path = "C:\Windows\Fonts\msgothic.ttc"
+font_path = "C:\Windows\Fonts\msgothic.ttc"
 
 # Register custom font
 pdfmetrics.registerFont(TTFont("msgothic", font_path))
