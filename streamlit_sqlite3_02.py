@@ -32,7 +32,7 @@ st.dataframe(df)
 
 # フォントファイルがアプリのディレクトリ内の fonts ディレクトリにある場合のパス msgothic.ttc
 # font_path = "fonts/msgothic.ttc"
-font_path = "fonts/Arial/msgothic.ttc"
+font_path = "fonts/msgothic.ttc"
 
 # Register custom font
 pdfmetrics.registerFont(TTFont("msgothic", font_path))
