@@ -148,9 +148,15 @@ elif choice == "顧客管理5":
 
 if choice == "総合生産管理":
     # title‘画像を表示する
-    st.caption("受注管理1:")
+    # タイトルを表示
+    st.title("受注管理1:")
+    # 画像を読み込んで横に並べて表示
     image = Image.open('./data/猫.png')
     st.image(image, width=70)
+
+    # st.caption("受注管理1:")
+    # image = Image.open('./data/猫.png')
+    # st.image(image, width=70)
 
     st.caption("出荷管理2:")
     image1 = Image.open('./data/牛.png')
