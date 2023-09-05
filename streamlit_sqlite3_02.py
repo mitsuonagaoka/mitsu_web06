@@ -148,47 +148,13 @@ elif choice == "顧客管理5":
 
 if choice == "総合生産管理":
     # title‘画像を表示する
-    # 列を2つ作成
-    # col1, col2 = st.beta_columns(2)
-    col1, col2 = st.columns(4)
+    st.caption("受注管理1:")
+    image = Image.open('./data/猫.png')
+    st.image(image, width=70)
 
-    # 左側の列にテキストを配置
-    with col1:
-        st.caption("受注管理1")
-
-    # 右側の列に画像を配置
-    with col2:
-        image = Image.open('./data/猫.png')
-        st.image(image, width=70)
-
-    # 左側の列にテキストを配置
-    with col3:
-        st.caption("出荷管理2")
-
-    # 右側の列に画像を配置
-    with col4:
-        image = Image.open('./data/牛.png')
-        st.image(image, width=70)
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # st.caption("受注管理1:")
-    # image = Image.open('./data/猫.png')
-    # st.image(image, width=70)
-
-    # st.caption("出荷管理2:")
-    # image1 = Image.open('./data/牛.png')
-    # st.image(image1, width=70)
+    st.caption("出荷管理2:")
+    image1 = Image.open('./data/牛.png')
+    st.image(image1, width=70)
 
     st.caption("在庫管理3:")
     image1 = Image.open('./data/犬.png')
