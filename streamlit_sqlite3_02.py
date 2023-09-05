@@ -149,7 +149,8 @@ elif choice == "顧客管理5":
 if choice == "総合生産管理":
     # title‘画像を表示する
     # 列を2つ作成
-    col1, col2 = st.beta_columns(2)
+    # col1, col2 = st.beta_columns(2)
+    col1, col2 = st.columns(2)
 
     # 左側の列にテキストを配置
     with col1:
