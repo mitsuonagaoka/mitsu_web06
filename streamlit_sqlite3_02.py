@@ -33,11 +33,11 @@ st.dataframe(df)
 # フォントファイルがアプリのディレクトリ内の fonts ディレクトリにある場合のパス
 # font_path = "fonts/msgothic.ttc"
 
-font_path = "C:\\Windows\\Fonts\\msgothic.ttc"
-
-# Register custom font
-pdfmetrics.registerFont(TTFont("msgothic", font_path))
-addMapping("msgothic", 0, 0, "msgothic")
+# font_path = "C:\\Windows\\Fonts\\msgothic.ttc"
+#
+# # Register custom font
+# pdfmetrics.registerFont(TTFont("msgothic", font_path))
+# addMapping("msgothic", 0, 0, "msgothic")
 
 
 # Create PDF with borders
@@ -62,15 +62,15 @@ addMapping("msgothic", 0, 0, "msgothic")
 #     return pdf_filename
 
 
-pdf_file = create_pdf(df)
-
-# Display PDF preview
-st.title('PDF Preview')
-with open(pdf_file, "rb") as f:
-    base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-st.markdown(
-    f'<embed src="data:application/pdf;base64,{base64_pdf}" width="800" height="600" type="application/pdf">',
-    unsafe_allow_html=True)
-
-# Display PDF download link
-st.markdown(f"Download [PDF File]({pdf_file})")
+# pdf_file = create_pdf(df)
+#
+# # Display PDF preview
+# st.title('PDF Preview')
+# with open(pdf_file, "rb") as f:
+#     base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+# st.markdown(
+#     f'<embed src="data:application/pdf;base64,{base64_pdf}" width="800" height="600" type="application/pdf">',
+#     unsafe_allow_html=True)
+#
+# # Display PDF download link
+# st.markdown(f"Download [PDF File]({pdf_file})")
