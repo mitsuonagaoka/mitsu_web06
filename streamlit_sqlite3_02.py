@@ -151,8 +151,9 @@ if choice == "総合生産管理":
     # タイトルを表示
     st.title("受注管理1:")
     # 画像を読み込んで横に並べて表示
-    image = Image.open('./data/猫.png')
-    st.image(image, width=70)
+    # 画像1を読み込んで横に表示
+    image1 = Image.open('./data/受注管理1.png')
+    st.image(image1, width=200)
 
     # st.caption("受注管理1:")
     # image = Image.open('./data/猫.png')
