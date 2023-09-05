@@ -41,25 +41,25 @@ addMapping("msgothic", 0, 0, "msgothic")
 
 
 # Create PDF with borders
-def create_pdf(dataframe):
-    pdf_filename = os.path.join(os.path.dirname(__file__), "output.pdf")
-
-    doc = SimpleDocTemplate(pdf_filename, pagesize=A4, topMargin=20,
-                            bottomMargin=20)  # Set A4 size and margins
-    data = [df.columns.tolist()] + df.values.tolist()
-
-    # Add borders to the table
-    table_style = TableStyle([('GRID', (0, 0), (-1, -1), 1, colors.black),
-                              ('FONTNAME', (0, 0), (-1, 0), "msgothic"),  # Use the specified font name
-                              ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
-                              ('BACKGROUND', (0, 0), (-1, 0), colors.gray)])
-
-    table = Table(data)
-    table.setStyle(table_style)
-
-    doc.build([table])
-
-    return pdf_filename
+# def create_pdf(dataframe):
+#     pdf_filename = os.path.join(os.path.dirname(__file__), "output.pdf")
+#
+#     doc = SimpleDocTemplate(pdf_filename, pagesize=A4, topMargin=20,
+#                             bottomMargin=20)  # Set A4 size and margins
+#     data = [df.columns.tolist()] + df.values.tolist()
+#
+#     # Add borders to the table
+#     table_style = TableStyle([('GRID', (0, 0), (-1, -1), 1, colors.black),
+#                               ('FONTNAME', (0, 0), (-1, 0), "msgothic"),  # Use the specified font name
+#                               ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+#                               ('BACKGROUND', (0, 0), (-1, 0), colors.gray)])
+#
+#     table = Table(data)
+#     table.setStyle(table_style)
+#
+#     doc.build([table])
+#
+#     return pdf_filename
 
 
 pdf_file = create_pdf(df)
