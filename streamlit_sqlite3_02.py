@@ -153,7 +153,7 @@ if choice == "総合生産管理":
 
     # 左側の列にテキストを配置
     with col1:
-        st.write("これはテキストです。")
+        st.caption("これはテキストです。")
 
     # 右側の列に画像を配置
     with col2:
