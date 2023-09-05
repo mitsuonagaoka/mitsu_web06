@@ -56,7 +56,7 @@ if choice == "受注管理1":
     # 選択されたサブメニューの情報を表示
     if submenu_choice == "受注1検索0":
         st.title('findings10 ')
-        findings10()
+        # findings10()
     elif submenu_choice == "受注1追加1":
         st.title('addings11 ')
         # addings11()
