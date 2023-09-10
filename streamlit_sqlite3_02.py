@@ -13,6 +13,8 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.fonts import addMapping
 import locale
 
+from PIL import Image
+
 
 # Connect to the SQLite database
 conn = sqlite3.connect("./data/product30.db")
@@ -65,6 +67,8 @@ def create_pdf(dataframe):
 pdf_file = create_pdf(df)
 
 # Display PDF preview
+st.write('Hellow World')
+st.write('Display PDF')
 st.title('PDF Preview')
 with open(pdf_file, "rb") as f:
     base64_pdf = base64.b64encode(f.read()).decode('utf-8')
@@ -76,6 +80,6 @@ st.markdown(
 st.markdown(f"Download [PDF File]({pdf_file})")
 
 # 受注管理1と猫.pngを横に並べる。
-st.caption("受注管理1:")
+st.caption("受注管理1111:")
 image = Image.open('./data/猫.png')
 st.image(image, width=70)
