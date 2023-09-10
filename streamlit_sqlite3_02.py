@@ -67,8 +67,6 @@ def create_pdf(dataframe):
 pdf_file = create_pdf(df)
 
 # Display PDF preview
-st.write('Hellow World')
-st.write('Display PDF')
 st.title('PDF Preview')
 with open(pdf_file, "rb") as f:
     base64_pdf = base64.b64encode(f.read()).decode('utf-8')
