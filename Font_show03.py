@@ -1,22 +1,30 @@
-#input
-from reportlab.pdfgen import canvas
-from reportlab.lib.pagesizes import A4, portrait, landscape
-from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.cidfonts import UnicodeCIDFont
-from reportlab.lib.units import mm
+# 例としてPDFファイルを生成
+import pandas as pd
+data = {'A': [1, 2, 3], 'B': [4, 5, 6]}
+df = pd.DataFrame(data)
+pdf_file = "output.pdf"
+create_pdf(df, pdf_file)
 
-# A4（横）の新規PDFファイルを作成
-p = canvas.Canvas("sample.pdf", pagesize=landscape(A4))
 
-# フォント指定・挿入
-pdfmetrics.registerFont(UnicodeCIDFont('HeiseiMin-W3'))
-p.setFont('HeiseiMin-W3', 24*mm)
-p.drawString(30*mm, 115*mm, 'このフォントは')
-p.drawString(50*mm, 85*mm, 'HeiseiMin-W3です。')
-
-# 保存
-p.showPage()
-p.save()
+# input
+# from reportlab.pdfgen import canvas
+# from reportlab.lib.pagesizes import A4, portrait, landscape
+# from reportlab.pdfbase import pdfmetrics
+# from reportlab.pdfbase.cidfonts import UnicodeCIDFont
+# from reportlab.lib.units import mm
+#
+# # A4（横）の新規PDFファイルを作成
+# p = canvas.Canvas("sample.pdf", pagesize=landscape(A4))
+#
+# # フォント指定・挿入
+# pdfmetrics.registerFont(UnicodeCIDFont('HeiseiMin-W3'))
+# p.setFont('HeiseiMin-W3', 24*mm)
+# p.drawString(30*mm, 115*mm, 'このフォントは')
+# p.drawString(50*mm, 85*mm, 'HeiseiMin-W3です。')
+#
+# # 保存
+# p.showPage()
+# p.save()
 
 # from reportlab.pdfgen import canvas
 # from reportlab.lib.pagesizes import A4, portrait
